@@ -20,14 +20,14 @@
       </div>
     </div>
     <div :class="Model>=5? 'switcher':'none'">
-      <div class="device"  @click="Model=0, price=0">
+      <div class="device"  @click="Model=0, finalPrice=0">
         Вернуться в начало
       </div>
      
     </div>
     
       <div class="cardModels" v-show="Model === 0">
-        <div class="model" @click="Model=5" v-for="(itemsIphone,id) in iPhone" :key="id">{{itemsIphone.body}}</div>
+        <div class="model" @click="Model=5, finalPrice+=iPhone[id].price" v-for="(itemsIphone,id) in iPhone" :key="id">{{itemsIphone.body}}</div>
        
       </div>
     
@@ -46,18 +46,17 @@
        
       </div>
       <div class="cardModels" v-show="Model===5">
-        <div class="model" v-for="(itemsProblems,id) in problems" :key="id">{{itemsProblems}}</div>
+        <div class="model" @click="Model=7, finalPrice+=problems[id].price" v-for="(itemsProblems,id) in problems" :key="id">{{itemsProblems.body}}</div>
         
         
       </div>
       <div class="cardModels" v-show="Model===6">
-        <div class="model" v-for="(itemsProblems,id) in problemsWatch" :key="id">{{itemsProblems}}</div>
+        <div class="model" @click="Model=7" v-for="(itemsProblems,id) in problemsWatch" :key="id">{{itemsProblems.body}}</div>
       
      </div>
       <div class="cardModels" v-show="Model===7">
         
-       <div class="price" >Примерная цена ремонта: {{}} рублей</div>
-       
+       <div class="model">Примерная цена ремонта: {{finalPrice}} рублей</div>
        <div class="model" v-scroll-to="'#callMe'">Заказать звонок оператора</div>
      </div>
       
@@ -73,8 +72,8 @@ export default {
 data(){
   return{
     Model: 0,
-    finalPrice:0,
-    iPhone:[{body:'iPhone 4', price: 1000},{body:'iPhone 4s', price: '0'},{body:'iPhone 5', price: '0'},{body:'iPhone 5C', price: '0'},{body:'iPhone 5S', price: '0'},{body:'iPhone 6', price: '0'},{body:'iPhone 6 Plus', price: '0'},
+    finalPrice: 0,
+    iPhone:[{body:'iPhone 4', price: 1000},{body:'iPhone 4s', price: '0'},{body:'iPhone 5', price: 1500},{body:'iPhone 5C', price: '0'},{body:'iPhone 5S', price: '0'},{body:'iPhone 6', price: '0'},{body:'iPhone 6 Plus', price: '0'},
     {body:'iPhone 6S Plus', price: '0'},{body:'iPhone SE', price: '0'},{body:'iPhone 7', price: '0'},{body:'iPhone 7 Plus', price: '0'},{body:'iPhone 8', price: '0'},{body:'iPhone 8 Plus', price: '0'},
     {body:'iPhone SE 2', price: '0'},{body:'iPhone X', price: '0'},{body:'iPhone Xr', price: '0'},{body:'iPhone Xs', price: '0'},{body:'iPhone Xs Max', price: '0'},{body:'iPhone 11', price: '0'},
     {body:'iPhone 11 Pro', price: '0'},{body:'iPhone 11 Pro Max', price: '0'},{body:'iPhone 12 Mini', price: '0'},{body:'iPhone 12', price: '0'},{body:'iPhone 12 Pro', price: '0'},
@@ -93,16 +92,16 @@ data(){
     {body:'Apple Watch 6', price: '0'}],
 
     OtherModels:[],
-    problems:['Быстро разряжается','Разбито стекло / Экран','Не заряжается','Плохо слышно Тихий динамик','Не работает кнопка / Кнопки','Не работает камера','Упал в воду / Попала вода',
-    'Другая неисправность'],
+    problems:[{body:'Быстро разряжается', price: 300},{body:'Разбито стекло / Экран', price: '0'},{body:'Не заряжается', price: '0'},{body:'Плохо слышно Тихий динамик', price: '0'},{body:'Не работает кнопка / Кнопки', price: '0'},{body:'Не работает камера', price: '0'},{body:'Упал в воду / Попала вода', price: '0'},
+    {body:'Другая неисправность', price: '0'}],
     
-     problemsWatch:['Быстро разряжается','Разбито стекло / Экран','Не заряжается','Не работает кнопка / Кнопки','Упал в воду / Попала вода',
-    'Другая неисправность'],
+     problemsWatch:[{body:'Быстро разряжается', price: 300},{body:'Разбито стекло / Экран', price: '0'},{body:'Не заряжается', price: '0'},{body:'Не работает кнопка / Кнопки', price: '0'},{body:'Упал в воду / Попала вода', price: '0'},
+    {body:'Другая неисправность', price: '0'}],
   }
 },
 methods: {
-  log(){
-    console.log(this.price)
+  priceIphone(id){
+    
   }
 
 }

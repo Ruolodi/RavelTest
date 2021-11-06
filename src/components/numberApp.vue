@@ -5,8 +5,8 @@
           <li>Мы вам перезвоним!</li>
       </ul>
       <form @submit.prevent="sendEmail">
-      <input class="inputNumb" type="text" placeholder="Введите ваше имя*" name="name" v-model="name">
-      <input class="inputNumb" id="phoneMessage" type="text" placeholder="8(XXX)-XXX-XX-XX*" maxlength="17" name="message" v-model="message">
+      <input class="inputNumb" type="text" placeholder="Введите ваше имя" name="name" v-model="name">
+      <input class="inputNumb" id="phoneMessage" type="text" placeholder="+7(___)-___-__-__" maxlength="18" name="message" v-model="message">
       
       <ul>
         <li style="color:red; font-size: 20px;" v-show="emptyField">Одно или несколько полей пустые! Заполните все поля для отправки данных!</li>
@@ -76,7 +76,7 @@ export default {
            this.emptyField=false
          } 
         this.message=this.message.replace(/[^0-9]/g, '')
-                    .replace(/^(\d{1})(\d{3})(\d{3})(\d{2})(\d{2})/g, '$1 ($2)-$3-$4-$5') 
+                    .replace(/^(\d{1})?(\d{3})?(\d{3})(\d{2})(\d{2})/g, '+7 ($2)-$3-$4-$5') 
       },
   },
 }
