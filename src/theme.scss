@@ -168,7 +168,8 @@ body{
 }
 
 .containerQuiz{
-    border: black 1px solid;
+    border-top: black 1px solid ;
+    border-bottom: black 1px solid;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
     width: 100vmax;
@@ -665,7 +666,7 @@ height:auto;
 
    
     .bodyBlock{
-        background: url('../images/hand.png') 95% 6%/30% no-repeat scroll , url('../images/logo.png') 3% 20px/ 15% no-repeat scroll,
+        background: url('../images/hand.png') 95% 5%/25% no-repeat scroll , url('../images/logo.png') 3% 20px/ 15% no-repeat scroll,
         url('../images/fon.jpg') 0 0/cover no-repeat fixed;
         
         
@@ -685,6 +686,15 @@ height:auto;
 //мобилка
 @media (max-width: 800px) {
 
+    .buttonURL{
+     
+        float: right;
+        width: fit-content;
+        height: fit-content;
+        display: inline;
+        padding: 30px;
+        cursor: pointer;
+    }
     .mob{
             padding: 10px;
             display: block;
@@ -700,7 +710,7 @@ height:auto;
         display: none;
     }
     .bodyBlock{
-        background: url('../images/hand.png') 0 0/0% no-repeat scroll , url('../images/logo.png') 3% 20px/ 30% no-repeat scroll,
+        background: url('../images/hand.png') 0 0/0% no-repeat scroll , url('../images/logo.png') 5% 30px/ 15% no-repeat scroll,
         url('../images/fon.jpg') 0 0/cover no-repeat fixed;
         
         

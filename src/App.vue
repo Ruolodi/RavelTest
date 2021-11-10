@@ -30,10 +30,13 @@ export default {
         sizeWidth: 0,
     }
   },
+ 
+  
     computed:{
          widthSize(){
             this.sizeWidth = window.innerWidth;
         }
+      
     },
 
 components:{
