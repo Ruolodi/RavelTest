@@ -785,6 +785,33 @@ body {
   margin: 25px 0 0 0;
 }
 
+.containerMap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ffffff;
+  width: 100vmax;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  padding: 50px;
+  border-bottom: 1px black solid;
+}
+
+.mapText {
+  height: 300px;
+  width: 500px;
+  margin-left: 10px;
+  border: 1px solid black;
+}
+
 .cardSlider {
   position: fixed;
   left: 0;

@@ -5,8 +5,10 @@
      <content-mob :style="sizeWidth<=800? 'block':'none'"></content-mob>
      <quiz-app></quiz-app>
      <number-app></number-app>
-   <!--   <popular-usl></popular-usl> -->
+    <map-yandex></map-yandex>
+        <!--   <popular-usl></popular-usl> -->
       <important-questions ></important-questions>
+      
       <footer-vue></footer-vue>
 
    </div>
@@ -22,6 +24,7 @@ import popularUslVue from './components/popularUsl.vue'
 import questionsVue from './components/questions.vue'
 import footerVue from './components/footer.vue'
 import contentMobVue from './components/contentMob.vue'
+import mapYandexVue from './components/mapYandex.vue'
 
 
 
@@ -49,7 +52,8 @@ components:{
   'popular-usl': popularUslVue,
   'important-questions': questionsVue,
   'footer-vue': footerVue,
-  'content-mob': contentMobVue
+  'content-mob': contentMobVue,
+  'map-yandex': mapYandexVue
   
 },
 }

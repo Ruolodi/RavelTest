@@ -545,6 +545,24 @@ body{
             }
         
     }
+    .containerMap{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        width: 100vmax;
+        height: fit-content;
+        display: flex;
+        padding: 50px;
+        border-bottom: 1px black solid;
+      
+    }
+    .mapText{
+        height: 300px;
+        width: 500px; 
+        margin-left: 10px;        
+        border: 1px solid black;
+    }
 
 .cardSlider{
     position: fixed;

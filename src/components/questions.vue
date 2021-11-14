@@ -26,17 +26,7 @@
       Каков реалистичный срок ремонта телефона? {{plus5}}
       <transition name="fadeQuestions"><h4 v-show="quest5">Сервисные центры ориентирован на ремонт телефонов в первый день. Это означает, что больше половины телефонов ремонтируются в течение 1-го дня с момента обращения клиента. Более длинные сроки ремонта могут быть связаны с высокой загруженностью или отсутствием необходимых запчастей.</h4></transition>
     </div>
-        <yandex-map style="height: 500px; width: 500px;"
-    :coords="coords"
-    :zoom="18" 
-   
-  >
-    <ymap-marker 
-      :coords="coords" 
-      marker-id="123" 
-      hint-content="Magic-Service" 
-    />
-  </yandex-map>
+     
 
   </div>
 
@@ -49,9 +39,7 @@ export default {
  
   data() {
     return {
-       coords: [
-     56.314223, 43.989416
-    ],
+   
      quest1: false,
      quest2: false,
      quest3: false,
