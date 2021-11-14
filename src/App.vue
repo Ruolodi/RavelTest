@@ -8,6 +8,7 @@
    <!--   <popular-usl></popular-usl> -->
       <important-questions ></important-questions>
       <footer-vue></footer-vue>
+
    </div>
    
 </template>
@@ -30,6 +31,7 @@ export default {
         sizeWidth: 0,
     }
   },
+
  
   
     computed:{
