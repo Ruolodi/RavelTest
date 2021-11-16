@@ -795,21 +795,50 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #ffffff;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #fff;
   width: 100vmax;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  display: flex;
   padding: 50px;
   border-bottom: 1px black solid;
 }
 
+.containerMap .btnMap {
+  margin: 80px 0 0 60px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: yellow;
+  font-weight: bold;
+  color: #000;
+  font-size: 15px;
+}
+
+.containerMap .btnMap:hover {
+  color: #000;
+  background-color: #fff;
+}
+
 .mapText {
-  height: 300px;
+  height: 400px;
   width: 500px;
-  margin-left: 10px;
+  margin-left: 30px;
   border: 1px solid black;
+  font-size: 20px;
+}
+
+.mapText .infoMap {
+  position: relative;
+  top: 20px;
+  text-align: center;
 }
 
 .cardSlider {

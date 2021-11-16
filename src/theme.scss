@@ -549,20 +549,46 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #ffffff;
+        flex-wrap: wrap;
+        background-color: #fff;
         width: 100vmax;
         height: fit-content;
-        display: flex;
         padding: 50px;
         border-bottom: 1px black solid;
-      
+        
+        .btnMap{
+            margin: 80px 0 0 60px;
+            width: fit-content;
+            height: fit-content;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: yellow;
+            font-weight: bold;
+            color: #000;
+            font-size: 15px;
+            
+           
+            &:hover{
+                color: #000;
+                background-color: #fff;
+            }
+        }
     }
     .mapText{
-        height: 300px;
+        height: 400px;
         width: 500px; 
-        margin-left: 10px;        
+        margin-left: 30px; 
         border: 1px solid black;
+        font-size: 20px;
+        .infoMap{
+            position: relative;
+            top: 20px;
+            text-align: center;
+        }
+  
     }
+   
+ 
 
 .cardSlider{
     position: fixed;
