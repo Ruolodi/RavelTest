@@ -6,7 +6,7 @@
       </ul>
       <form @submit.prevent="sendEmail">
       <input class="inputNumb" type="text" placeholder="Введите ваше имя" name="name" v-model="name">
-      <input class="inputNumb" id="phoneMessage" type="text" placeholder="+7(___)-___-__-__" maxlength="18" name="message" v-model="message">
+      <input class="inputNumb" id="phoneMessage" onpaste="return false;" type="text" placeholder="(___)-___-__-__" maxlength="17" name="message" v-model="message">
       
       <ul>
         <li style="color:red; font-size: 20px;" v-show="emptyField">Одно или несколько полей пустые! Заполните все поля для отправки данных!</li>
@@ -27,6 +27,7 @@ export default {
       name:'',
       message: '',
       problem: '',
+      
       emptyField: false,
 
 
@@ -72,11 +73,12 @@ export default {
          }
       }, 
       message(){
-          if(this.message){
+          if(this.message.length===1&&this.message!=='8'){
            this.emptyField=false
+           this.message='8'+this.message
          } 
         this.message=this.message.replace(/[^0-9]/g, '')
-                    .replace(/^(\d{1})?(\d{3})?(\d{3})(\d{2})(\d{2})/g, '+7 ($2)-$3-$4-$5') 
+                    .replace(/^(\d{1})?(\d{3})?(\d{3})(\d{2})(\d{2})/g, '$1 ($2)-$3-$4-$5') 
       },
   },
 }

@@ -30,7 +30,7 @@
     <div class="infoMap">Сб 10:00 - 20:00</div>
     <div class="infoMap">Вс 10:00 - 20:00</div>
     <button class="btnMap">+7 (831) 410-53-10</button>
-    <button class="btnMap">+7 (831) 410-53-10</button>
+    <button class="btnMap">+7 (910) 790-53-10</button>
   </div>
        
   </div>
