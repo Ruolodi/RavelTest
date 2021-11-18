@@ -29,8 +29,8 @@
     <div class="infoMap">Пт 10:00 - 20:00</div>
     <div class="infoMap">Сб 10:00 - 20:00</div>
     <div class="infoMap">Вс 10:00 - 20:00</div>
-    <button class="btnMap">+7 (831) 410-53-10</button>
-    <button class="btnMap">+7 (910) 790-53-10</button>
+    <button class="btnMap" v-scroll-to="'#callMe'">+7 (831) 410-53-10</button>
+    <button class="btnMap" v-scroll-to="'#callMe'">+7 (910) 790-53-10</button>
   </div>
        
   </div>
@@ -43,7 +43,7 @@ export default {
                 coords: [56.314223, 43.989416],
       markerIcon: {
       layout: 'default#imageWithContent',
-      imageHref: 'https://psv4.userapi.com/c534536/u38864817/docs/d10/56af33e32cd6/magic-logo-map.png?extra=GP4LYVuR_3u-yiHHurn9PcvDRHbIxKdmdTSZ5Jo4PdjD0hOWK_gWjYmpbav9rg9WEpi98DdYZ3xuQzXHHOi_dZCsJfF4GE621FT59vPPP7RFUZoiZ9vIXswGAB7Ycx5nPIDMDwt2HpjC9bpfpOw',
+      imageHref: 'https://i.ibb.co/gdqdh1s/magic-logo-map.png',
       imageSize: [43, 43],
       imageOffset: [0, 0],
       content: 'Magic Service',

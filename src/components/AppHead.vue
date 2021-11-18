@@ -17,10 +17,11 @@
             <li>Ремонт за 15-30 минут от 999 рублей!</li>
             <li>100% Оригинальные комплектующие</li>
             <li>Гарантия качества или вернем деньги!</li>
-             
+              
 
           </ul>
-          
+          <button class="btn" v-scroll-to="'#callMe'">+7 (831) 410-53-10</button>
+          <button class="btn" v-scroll-to="'#callMe'">+7 (910) 790-53-10</button>
       </div>
       
       
