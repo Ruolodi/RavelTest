@@ -134,7 +134,7 @@ body {
 }
 
 .bodyBlock {
-  background: url("../images/hand.png") 85% 9%/15% no-repeat scroll, url("../images/logo.png") 3% 20px/15% no-repeat scroll, url("../images/fon.jpg") 0 0/cover no-repeat fixed;
+  background: url("../images/hand.png") 80% 38vh/15% no-repeat scroll, url("../images/logo.png") 3% 20px/15% no-repeat scroll, url("../images/fon.jpg") 0 0/cover no-repeat fixed;
   width: 100vmax;
 }
 
@@ -170,22 +170,30 @@ body {
 .card {
   position: relative;
   top: 30vh;
-  width: 100vmax;
+  width: 70vmax;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .card .btn {
   position: relative;
-  margin: 100px 0 0 15%;
-  width: 500px;
+  margin: 100px 0 0 10%;
+  width: 400px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 10px;
+  padding: 30px;
   border-radius: 5px;
-  background-color: #fff55a;
+  background-color: #e9d200;
   font-weight: bold;
   color: black;
   font-size: 20px;
@@ -202,6 +210,21 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 1px solid black;
+}
+
+.card .btn:hover {
+  background-color: rgba(236, 201, 0, 0.9);
+}
+
+.card .btn::before {
+  content: '';
+  background: url("../images/phone_icon.png") 0 0/35% no-repeat;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 28%;
+  left: 4%;
 }
 
 .list {
@@ -211,7 +234,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: 7%;
+  margin-left: 10vmax;
   width: 55%;
 }
 
@@ -241,7 +264,7 @@ body {
   width: 70px;
   height: 70px;
   position: absolute;
-  top: -5px;
+  top: -10px;
   left: 0;
 }
 
@@ -255,7 +278,7 @@ body {
   width: 70px;
   height: 70px;
   position: absolute;
-  top: -5px;
+  top: -10px;
   left: 0;
 }
 
@@ -269,7 +292,7 @@ body {
   width: 70px;
   height: 70px;
   position: absolute;
-  top: -5px;
+  top: -10px;
   left: 15px;
 }
 
@@ -521,8 +544,8 @@ body {
   height: fit-content;
   padding: 10px;
   border-radius: 5px;
-  background-color: #fff55a;
-  border: #fff55a 1px solid;
+  background-color: #e9d200;
+  border: #e9d200 1px solid;
   font-weight: bold;
   color: black;
   font-size: 15px;
@@ -601,7 +624,7 @@ body {
   height: fit-content;
   padding: 10px;
   border-radius: 5px;
-  background-color: #fff55a;
+  background-color: #e9d200;
   font-weight: bold;
   color: black;
   font-size: 15px;
@@ -844,7 +867,7 @@ body {
   height: fit-content;
   padding: 10px;
   border-radius: 5px;
-  background-color: yellow;
+  background-color: #e9d200;
   font-weight: bold;
   color: #000;
   font-size: 15px;
@@ -1116,7 +1139,7 @@ body {
     height: fit-content;
     padding: 10px;
     border-radius: 5px;
-    background-color: #fff55a;
+    background-color: #e9d200;
     font-weight: bold;
     color: black;
     font-size: 20px;
