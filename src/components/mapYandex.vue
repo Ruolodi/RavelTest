@@ -22,13 +22,12 @@
     <br/>
     <div class="infoMap">Режим работы: </div>
     <br/>
-    <div class="infoMap">Пн 10:00 - 20:00</div>
-    <div class="infoMap">Вт 10:00 - 20:00</div>
-    <div class="infoMap">Ср 10:00 - 20:00</div>
-    <div class="infoMap">Чт 10:00 - 20:00</div>
-    <div class="infoMap">Пт 10:00 - 20:00</div>
-    <div class="infoMap">Сб 10:00 - 20:00</div>
-    <div class="infoMap">Вс 10:00 - 20:00</div>
+    <div class="infoMap">ежедневно</div>
+    <br/>
+    <div class="infoMap">с 10:00 до 20:00</div>
+    <br/>
+    <br/>
+      <div class="infoMap">Без обеда и выходных!</div>
     <button class="btnMap" v-scroll-to="'#callMe'">+7 (831) 410-53-10</button>
     <button class="btnMap" v-scroll-to="'#callMe'">+7 (910) 790-53-10</button>
   </div>

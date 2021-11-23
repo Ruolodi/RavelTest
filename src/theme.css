@@ -134,7 +134,7 @@ body {
 }
 
 .bodyBlock {
-  background: url("../images/hand.png") 80% 38vh/15% no-repeat scroll, url("../images/logo.png") 3% 20px/15% no-repeat scroll, url("../images/fon.jpg") 0 0/cover no-repeat fixed;
+  background: url("../images/hand.png") 90% 26vh/400px 800px no-repeat scroll, url("../images/logo.png") 3% 20px/15% no-repeat scroll, url("../images/fon.jpg") 0 0/cover no-repeat fixed;
   width: 100vmax;
 }
 
@@ -174,20 +174,13 @@ body {
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 .card .btn {
+  float: left;
   position: relative;
-  margin: 100px 0 0 10%;
-  width: 400px;
+  margin: 150px 0 0 15%;
+  width: 350px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -196,7 +189,7 @@ body {
   background-color: #e9d200;
   font-weight: bold;
   color: black;
-  font-size: 20px;
+  font-size: 23px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -223,7 +216,7 @@ body {
   width: 100px;
   height: 100px;
   position: absolute;
-  top: 28%;
+  top: 32%;
   left: 4%;
 }
 
@@ -297,7 +290,7 @@ body {
 }
 
 .containerContent {
-  margin: 30% 0 0 0;
+  margin: 70vh 0 0 0;
   padding: 0 0 40px 0;
   width: 100vmax;
   height: -webkit-fit-content;
@@ -387,7 +380,6 @@ body {
   height: 50px;
   background-color: #ffffff;
   border-bottom: black 1px solid;
-  margin: 0 auto 0 auto;
 }
 
 .containerQuiz .switcher .device {
@@ -440,7 +432,7 @@ body {
   height: fit-content;
   margin: 0 auto 0 auto;
   background-color: #ffffff;
-  padding: 100px 250px 100px 250px;
+  padding: 50px 200px 50px 200px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font-size: 30px;
@@ -474,7 +466,7 @@ body {
   border: black solid 1px;
   margin: 0 10px 20px 10px;
   color: black;
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
   cursor: pointer;
 }
@@ -1132,12 +1124,13 @@ body {
         flex-wrap: wrap;
   }
   .card .btn {
-    margin: 100px 0 0 100px;
-    width: 500px;
+    position: relative;
+    margin: 75px 0 0 20%;
+    width: 350px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding: 10px;
+    padding: 30px;
     border-radius: 5px;
     background-color: #e9d200;
     font-weight: bold;
@@ -1156,6 +1149,19 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    border: 1px solid black;
+  }
+  .card .btn:hover {
+    background-color: rgba(236, 201, 0, 0.9);
+  }
+  .card .btn::before {
+    content: '';
+    background: url("../images/phone_icon.png") 0 0/35% no-repeat;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 28%;
+    left: 4%;
   }
   .list {
     font-size: 4vh;
