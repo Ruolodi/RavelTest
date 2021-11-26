@@ -37,7 +37,7 @@ export default {
     sendEmail(e) {
       try {
 
-        if(this.name!==''&&this.message!==''){
+        if(this.name!==''&&this.message!==''&&this.message.length===17){
         emailjs.sendForm('service_m1iia5n', 'template_32s9sab', e.target,
         'user_Uz4zxrRJpusHU6WVRqZsw', {
           name: this.name,
