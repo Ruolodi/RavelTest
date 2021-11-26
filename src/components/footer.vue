@@ -17,16 +17,10 @@
                <button class="btn" v-scroll-to="'#callMe'">+7(910)790-53-10</button>
       </div>
         <div class="cardFooter">
-          <div class="logoContactsVk">
-            <a href=""></a>
-          </div>
-          <div class="logoContactsInst">
-            <a href=""></a>     
-          </div>
-          <div class="logoContactsTelegram">
-            <a href=""></a>
-          </div>
-      </div>
+         <a target="_blank" href="https://vk.com/magicserviceru"> <div class="logoContactsVk"></div></a>
+         <a target="_blank" href="https://instagram.com/magicservice.ru?utm_medium=copy_link"> <div class="logoContactsInst"></div> </a>  
+         <a target="_blank" href="https://tlgg.ru/magicserviceru" > <div class="logoContactsTelegram"> </div></a>
+</div>
   </div>
 </template>
 

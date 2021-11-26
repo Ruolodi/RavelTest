@@ -134,7 +134,7 @@ body {
 }
 
 .bodyBlock {
-  background: url("../images/hand.png") 90% 26vh/400px 800px no-repeat scroll, url("../images/logo.png") 3% 20px/15% no-repeat scroll, url("../images/fon.jpg") 0 0/cover no-repeat fixed;
+  background: url("../images/hand.png") 90% 26vh/300px 600px no-repeat scroll, url("../images/logo.png") 3% 20px/15% no-repeat scroll, url("../images/fon.jpg") 0 0/cover no-repeat fixed;
   width: 100vmax;
 }
 
@@ -221,7 +221,7 @@ body {
 }
 
 .list {
-  font-size: 4vh;
+  font-size: 3vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -995,7 +995,7 @@ body {
 
 @media (max-width: 1450px) {
   .bodyBlock {
-    background: url("../images/hand.png") 95% 5%/25% no-repeat scroll, url("../images/logo.png") 3% 20px/15% no-repeat scroll, url("../images/fon.jpg") 0 0/cover no-repeat fixed;
+    background: url("../images/hand.png") 95% 5%/300px 600px no-repeat scroll, url("../images/logo.png") 3% 20px/15% no-repeat scroll, url("../images/fon.jpg") 0 0/cover no-repeat fixed;
   }
   .card {
     position: relative;
@@ -1008,17 +1008,21 @@ body {
 }
 
 @media (max-width: 800px) {
-  .buttonURL {
-    float: right;
+  .container {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+  }
+  .buttonURL {
+    width: 25vmax;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     display: inline;
     padding: 30px;
     cursor: pointer;
+    margin: 22% 5% 0 0;
+    padding: 0;
   }
   .mob {
     padding: 10px;
@@ -1032,14 +1036,14 @@ body {
     display: none;
   }
   .bodyBlock {
-    background: url("../images/hand.png") 0 0/0% no-repeat scroll, url("../images/logo.png") 5% 30px/15% no-repeat scroll, url("../images/fon.jpg") 0 0/cover no-repeat fixed;
+    background: url("../images/hand.png") 0 0/0% no-repeat scroll, url("../images/logo.png") 50% 30px/40% no-repeat scroll, url("../images/fon.jpg") 0 0/cover no-repeat fixed;
     width: 100vmax;
   }
   .containerContent {
     display: none;
   }
   .containerContent1 {
-    margin: 70% 0 0 0;
+    margin: 40% 0 0 0;
     padding: 0 0 40px 0;
     width: 100vmax;
     height: -webkit-fit-content;
@@ -1125,8 +1129,8 @@ body {
   }
   .card .btn {
     position: relative;
-    margin: 75px 0 0 20%;
-    width: 350px;
+    margin: 150px 0 0 20%;
+    width: 400px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -1135,7 +1139,7 @@ body {
     background-color: #e9d200;
     font-weight: bold;
     color: black;
-    font-size: 20px;
+    font-size: 25px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

@@ -5,7 +5,7 @@
    <div class="container" id="head"> 
      
       <div class="buttonURL" v-scroll-to="'#questions'"><a >Вопросы</a></div>
-      <div class="buttonURL" v-scroll-to="'#photos'"><a >Отзывы</a></div>
+      <div class="buttonURL"  v-scroll-to="'#photos'"><a >Отзывы</a></div>
       <div class="buttonURL" v-scroll-to="'#callMe'"><a >Контакты</a></div>
       
       

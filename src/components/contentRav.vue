@@ -24,7 +24,7 @@
           <div class="slider">
               
               <button class="prev" @click="prev" ></button>
-              <a  @click="showSlider=!showSlider" target="_blank"> <img class="imgSlider" :src="arr[numberSlide].photo" alt="" ></a>
+              <a  @click="showSlider=!showSlider"  > <img class="imgSlider" @click="show()" :src="arr[numberSlide].photo" alt="" ></a>
               
               <button class="next" @click="next" ></button>
               
