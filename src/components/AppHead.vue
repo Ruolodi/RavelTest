@@ -20,9 +20,11 @@
               
 
           </ul>
-          <button class="btn" v-scroll-to="'#callMe'">+7 (831) 410-53-10</button>
-          <button class="btn" v-scroll-to="'#callMe'">+7 (910) 790-53-10</button>
-      </div>
+          <div class="buttonsHead">
+            <button class="btn" v-scroll-to="'#callMe'">+7 (831) 410-53-10</button>
+            <button class="btn" v-scroll-to="'#callMe'">+7 (910) 790-53-10</button>
+          </div>
+     </div>
       
       
 

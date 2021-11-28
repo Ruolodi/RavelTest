@@ -2,8 +2,8 @@
   <div  class="containerMap">
          <yandex-map 
          style="height: 500px;
-                width: 50vmax; 
-                margin: 0 0 30px 0;
+                width: 40vmax; 
+                margin: 0 auto;
                 border: 1px solid black;"
     :coords="coords"
     :zoom="18" 

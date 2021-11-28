@@ -131,14 +131,25 @@ a {
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: #251d37;
+  background: url("../images/hand.png") 80% 175px/300px 600px no-repeat scroll, url("../images/logo.png") 3% 20px/15% no-repeat scroll, url("../images/fon.jpg") 0 0/cover no-repeat fixed;
 }
 
 .bodyBlock {
-  background: url("../images/hand.png") 90% 26vh/300px 600px no-repeat scroll, url("../images/logo.png") 3% 20px/15% no-repeat scroll, url("../images/fon.jpg") 0 0/cover no-repeat fixed;
+  width: auto;
+  border: #f81f1f 2px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bodyBlock .container {
+  border: #2aa586 2px solid;
   width: 100vmax;
 }
 
-.buttonURL {
+.bodyBlock .container .buttonURL {
   float: right;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -149,38 +160,58 @@ body {
   display: inline;
   padding: 30px;
   cursor: pointer;
+  font-size: 30px;
 }
 
-.buttonURL a {
+.bodyBlock .container .buttonURL a {
   text-shadow: 3px 3px 3px #000;
   padding: 0 13px 9px 10px;
-  font-size: 35px;
   color: white;
 }
 
-.buttonURL a:hover {
+.bodyBlock .container .buttonURL a:hover {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
 }
 
-.buttonURL a:active {
+.bodyBlock .container .buttonURL a:active {
   background-color: blueviolet;
 }
 
-.card {
-  position: relative;
-  top: 30vh;
-  width: 70vmax;
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
+.bodyBlock .container .card {
+  margin: 200px auto 0 auto;
+  border: #08768a 2px solid;
+  width: 75vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 0 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.card .btn {
-  float: left;
+.bodyBlock .container .card .buttonsHead {
+  border: brown 2px solid;
+  width: 75vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: inline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.bodyBlock .container .card .buttonsHead .btn {
   position: relative;
-  margin: 150px 0 0 15%;
-  width: 350px;
+  margin: 0 0 0 10%;
+  width: 250px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -189,28 +220,15 @@ body {
   background-color: #e9d200;
   font-weight: bold;
   color: black;
-  font-size: 23px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  font-size: 15px;
   border: 1px solid black;
 }
 
-.card .btn:hover {
+.bodyBlock .container .card .buttonsHead .btn:hover {
   background-color: rgba(236, 201, 0, 0.9);
 }
 
-.card .btn::before {
+.bodyBlock .container .card .buttonsHead .btn::before {
   content: '';
   background: url("../images/phone_icon.png") 0 0/35% no-repeat;
   width: 100px;
@@ -220,38 +238,32 @@ body {
   left: 4%;
 }
 
-.list {
-  font-size: 3vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: 10vmax;
-  width: 55%;
+.bodyBlock .container .card .list {
+  margin: 0 0 0 0;
+  font-size: 35px;
 }
 
-.list li {
+.bodyBlock .container .card .list li {
   position: relative;
   color: white;
   margin: 0 0 20px 0;
   padding: 0 0 0 75px;
 }
 
-.list li:nth-child(1) {
+.bodyBlock .container .card .list li:nth-child(1) {
   font-weight: bold;
   margin: 0 0 40px 0;
 }
 
-.list li:nth-child(2) {
+.bodyBlock .container .card .list li:nth-child(2) {
   margin: 0 0 70px 0;
 }
 
-.list li:nth-child(3) {
+.bodyBlock .container .card .list li:nth-child(3) {
   margin: 0 0 50px 0;
 }
 
-.list li:nth-child(3)::before {
+.bodyBlock .container .card .list li:nth-child(3)::before {
   content: '';
   background: url("../images/clock.png") 0 0 no-repeat;
   width: 70px;
@@ -261,11 +273,11 @@ body {
   left: 0;
 }
 
-.list li:nth-child(4) {
+.bodyBlock .container .card .list li:nth-child(4) {
   margin: 0 0 50px 0;
 }
 
-.list li:nth-child(4)::before {
+.bodyBlock .container .card .list li:nth-child(4)::before {
   content: '';
   background: url("../images/chip.png") 0 0 no-repeat;
   width: 70px;
@@ -275,11 +287,11 @@ body {
   left: 0;
 }
 
-.list li:nth-child(5) {
+.bodyBlock .container .card .list li:nth-child(5) {
   margin: 0 0 50px 0;
 }
 
-.list li:nth-child(5)::before {
+.bodyBlock .container .card .list li:nth-child(5)::before {
   content: '';
   background: url("../images/medal.png") 0 0 no-repeat;
   width: 70px;
@@ -289,34 +301,32 @@ body {
   left: 15px;
 }
 
-.containerContent {
-  margin: 70vh 0 0 0;
-  padding: 0 0 40px 0;
+.bodyBlock .containerContent {
   width: 100vmax;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background: url("../images/space.png");
-  border-top: black 1px solid;
+  padding: 0 0 30px 0;
 }
 
-.containerContent li {
+.bodyBlock .containerContent li {
   color: black;
   font-size: 4vh;
   text-align: center;
   text-shadow: 1px 1px 1px #000;
 }
 
-.containerContent li:nth-child(1) {
+.bodyBlock .containerContent li:nth-child(1) {
   padding: 40px 0 0 0;
 }
 
-.containerContent li:nth-child(2) {
+.bodyBlock .containerContent li:nth-child(2) {
   margin: 20px 0 0 0;
   font-size: 3vh;
 }
 
-.containerContent .flexPhoto {
+.bodyBlock .containerContent .flexPhoto {
   width: 70%;
   margin: 0 auto;
   display: -webkit-box;
@@ -339,7 +349,7 @@ body {
           justify-content: center;
 }
 
-.containerContent .flexPhoto .photo1 {
+.bodyBlock .containerContent .flexPhoto .photo1 {
   cursor: pointer;
   overflow: hidden;
   margin: 50px 0 0 10px;
@@ -349,13 +359,13 @@ body {
   border: 1px solid #000;
 }
 
-.containerContent .flexPhoto img {
+.bodyBlock .containerContent .flexPhoto img {
   position: relative;
   left: 11px;
   top: -100px;
 }
 
-.containerQuiz {
+.bodyBlock .containerQuiz {
   border-top: black 1px solid;
   border-bottom: black 1px solid;
   margin: 0 0 0 0;
@@ -366,7 +376,7 @@ body {
   height: fit-content;
 }
 
-.containerQuiz .switcher {
+.bodyBlock .containerQuiz .switcher {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -376,13 +386,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100vmax;
+  width: auto;
   height: 50px;
   background-color: #ffffff;
   border-bottom: black 1px solid;
 }
 
-.containerQuiz .switcher .device {
+.bodyBlock .containerQuiz .switcher .device {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -397,11 +407,11 @@ body {
   cursor: pointer;
 }
 
-.containerQuiz .switcher .device:hover {
+.bodyBlock .containerQuiz .switcher .device:hover {
   color: red;
 }
 
-.containerQuiz .switcher .deviceActive {
+.bodyBlock .containerQuiz .switcher .deviceActive {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -416,7 +426,7 @@ body {
   cursor: pointer;
 }
 
-.containerQuiz .cardModels {
+.bodyBlock .containerQuiz .cardModels {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,7 +436,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100vmax;
+  width: auto;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -439,23 +449,7 @@ body {
   color: black;
 }
 
-.containerQuiz .cardModels .price {
-  width: 600px;
-  height: 300px;
-  font-size: 30px;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.containerQuiz .cardModels .model {
+.bodyBlock .containerQuiz .cardModels .model {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -471,13 +465,13 @@ body {
   cursor: pointer;
 }
 
-.containerQuiz .cardModels .model:hover {
+.bodyBlock .containerQuiz .cardModels .model:hover {
   -webkit-box-shadow: 0 0 1px black, 0 0 3px black, 0 0 5px black;
           box-shadow: 0 0 1px black, 0 0 3px black, 0 0 5px black;
   border: black solid 1px;
 }
 
-.containterNumber {
+.bodyBlock .containterNumber {
   border-bottom: black 1px solid;
   margin: 0 0 0 0;
   padding: 0 0 40px 0;
@@ -488,25 +482,25 @@ body {
   background: url("../images/space1.png");
 }
 
-.containterNumber li {
+.bodyBlock .containterNumber li {
   position: relative;
   font-size: 40px;
   font-weight: bold;
   text-align: center;
 }
 
-.containterNumber li:nth-child(1) {
+.bodyBlock .containterNumber li:nth-child(1) {
   padding: 120px 0 0 0;
   color: black;
 }
 
-.containterNumber li:nth-child(2) {
+.bodyBlock .containterNumber li:nth-child(2) {
   font-size: 25px;
   padding: 30px 0 0 0;
   color: black;
 }
 
-.containterNumber .inputNumb {
+.bodyBlock .containterNumber .inputNumb {
   font-size: 20px;
   color: black;
   width: 300px;
@@ -528,7 +522,7 @@ body {
   border-bottom: 1px solid black;
 }
 
-.containterNumber .btn {
+.bodyBlock .containterNumber .btn {
   margin: 50px auto 70px auto;
   width: 300px;
   height: -webkit-fit-content;
@@ -558,59 +552,37 @@ body {
       flex-wrap: wrap;
 }
 
-.containterNumber .btn:hover {
+.bodyBlock .containterNumber .btn:hover {
   background-color: white;
 }
 
-.containerUsl {
-  margin: 0 0 0 0;
-  padding: 0 0 40px 0;
-  width: 100vmax;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+.bodyBlock .containerMap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background-color: #fff;
+  width: 100vmax;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 50px;
+  border-bottom: 1px black solid;
+  margin: 0 auto;
 }
 
-.containerUsl .inputNumbUsl {
-  font-size: 20px;
-  color: white;
-  width: 300px;
-  padding: 5px;
-  margin: 40px auto 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, 0);
-  border-bottom: 1px solid #fff;
-}
-
-.containerUsl .btn {
-  margin: 50px auto 50px auto;
-  width: 300px;
+.bodyBlock .containerMap .btnMap {
+  margin: 80px 0 0 60px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -618,57 +590,31 @@ body {
   border-radius: 5px;
   background-color: #e9d200;
   font-weight: bold;
-  color: black;
+  color: #000;
   font-size: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  border: 1px solid #e9d200;
 }
 
-.containerUsl .cardUsl {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 50px auto 0 auto;
-  background: url("../images/popusl.jpg") 0 0/100% 100% no-repeat;
-  width: 1000px;
-  height: 1000px;
+.bodyBlock .containerMap .btnMap:hover {
+  color: #000;
+  background-color: #fff;
 }
 
-.containerUsl .cardUsl li {
-  padding: 5px 0 0 0;
-  color: white;
-  font-size: 40px;
+.bodyBlock .mapText {
+  height: 400px;
+  width: 500px;
+  margin: 20px auto 0 auto;
+  border: 1px solid black;
+  font-size: 20px;
+}
+
+.bodyBlock .mapText .infoMap {
+  position: relative;
+  top: 20px;
   text-align: center;
-  text-shadow: 1px 1px 1px #000;
 }
 
-.containerUsl .cardUsl li:nth-child(1) {
-  font-weight: bold;
-  margin: 0 0 40px 0;
-}
-
-.containerUsl .cardUsl li:nth-child(2) {
-  margin: 0 0 40px 0;
-}
-
-.containerUsl .cardUsl li:nth-child(3) {
-  margin: 0 0 40px 0;
-}
-
-.containerQuestions {
+.bodyBlock .containerQuestions {
   background-color: #ffffff;
   width: 100vmax;
   height: -webkit-fit-content;
@@ -677,24 +623,24 @@ body {
   padding: 5px;
 }
 
-.containerQuestions ul {
+.bodyBlock .containerQuestions ul {
   text-align: center;
   font-weight: bold;
   color: black;
   padding: 10px;
 }
 
-.containerQuestions ul li:nth-child(1) {
+.bodyBlock .containerQuestions ul li:nth-child(1) {
   font-size: 30px;
   padding: 0 0 20px 0;
 }
 
-.containerQuestions ul li:nth-child(2) {
+.bodyBlock .containerQuestions ul li:nth-child(2) {
   font-size: 20px;
   padding: 0 0 30px 0;
 }
 
-.containerQuestions .questCard {
+.bodyBlock .containerQuestions .questCard {
   text-align: center;
   width: 50vmax;
   height: -webkit-fit-content;
@@ -710,12 +656,12 @@ body {
   border-radius: 10px;
 }
 
-.containerQuestions .questCard:hover {
+.bodyBlock .containerQuestions .questCard:hover {
   color: white;
   background-color: #000000;
 }
 
-.containerQuestions .questCard h4 {
+.bodyBlock .containerQuestions .questCard h4 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -724,7 +670,7 @@ body {
   border-radius: 5px;
 }
 
-.footerVue {
+.bodyBlock .footerVue {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -737,37 +683,37 @@ body {
   padding: 5px;
 }
 
-.footerVue .cardFooter {
+.bodyBlock .footerVue .cardFooter {
   background-color: #1c1c1c;
-  width: 50vw;
+  width: auto;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin: 0 auto 0 auto;
 }
 
-.footerVue .cardFooter .logoContactsVk {
+.bodyBlock .footerVue .cardFooter .logoContactsVk {
   margin: 2vh auto 0 auto;
   background: url("../images/vk.png") 50% 25%/80% no-repeat scroll;
   width: 50px;
   height: 50px;
 }
 
-.footerVue .cardFooter .logoContactsInst {
+.bodyBlock .footerVue .cardFooter .logoContactsInst {
   margin: 0 auto 0 auto;
   background: url("../images/inst.png") 50% 25%/80% no-repeat scroll;
   width: 50px;
   height: 50px;
 }
 
-.footerVue .cardFooter .logoContactsTelegram {
+.bodyBlock .footerVue .cardFooter .logoContactsTelegram {
   margin: 0 auto 0 auto;
   background: url("../images/telegram.png") 50% 25%/80% no-repeat scroll;
   width: 50px;
   height: 50px;
 }
 
-.footerVue .cardFooter h3 {
+.bodyBlock .footerVue .cardFooter h3 {
   text-align: center;
   font-size: 2vh;
   font-weight: bold;
@@ -776,7 +722,7 @@ body {
   padding: 10px;
 }
 
-.footerVue .cardFooter .btn {
+.bodyBlock .footerVue .cardFooter .btn {
   margin: 5px auto 15px auto;
   width: 150px;
   height: -webkit-fit-content;
@@ -805,14 +751,14 @@ body {
       flex-wrap: wrap;
 }
 
-.footerVue .cardFooter .btn:hover {
+.bodyBlock .footerVue .cardFooter .btn:hover {
   color: white;
   background-color: #1c1c1c;
 }
 
-.footerVue .cardFooter ul {
+.bodyBlock .footerVue .cardFooter ul {
   text-align: center;
-  font-size: 3vh;
+  font-size: 2vh;
   font-weight: bold;
   color: #fff;
   margin: 20px 0 0 -30px;
@@ -820,71 +766,15 @@ body {
   cursor: pointer;
 }
 
-.footerVue .cardFooter li:nth-child(1) {
+.bodyBlock .footerVue .cardFooter li:nth-child(1) {
   margin: 8px 0 0 0;
 }
 
-.footerVue .cardFooter li:nth-child(2) {
+.bodyBlock .footerVue .cardFooter li:nth-child(2) {
   margin: 25px 0 0 0;
 }
 
-.containerMap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background-color: #fff;
-  width: 100vmax;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 50px;
-  border-bottom: 1px black solid;
-}
-
-.containerMap .btnMap {
-  margin: 80px 0 0 60px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #e9d200;
-  font-weight: bold;
-  color: #000;
-  font-size: 15px;
-}
-
-.containerMap .btnMap:hover {
-  color: #000;
-  background-color: #fff;
-}
-
-.mapText {
-  height: 400px;
-  width: 500px;
-  margin-left: 30px;
-  border: 1px solid black;
-  font-size: 20px;
-}
-
-.mapText .infoMap {
-  position: relative;
-  top: 20px;
-  text-align: center;
-}
-
-.cardSlider {
+.bodyBlock .cardSlider {
   position: fixed;
   left: 0;
   right: 0;
@@ -895,7 +785,7 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.cardSlider .slider {
+.bodyBlock .cardSlider .slider {
   padding: 70px 20px 70px 20px;
   position: fixed;
   top: 50%;
@@ -912,7 +802,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.cardSlider .next {
+.bodyBlock .cardSlider .next {
   margin-top: 55%;
   font-size: 15px;
   height: 100%;
@@ -923,7 +813,7 @@ body {
   background: rgba(255, 255, 255, 0);
 }
 
-.cardSlider .next::after {
+.bodyBlock .cardSlider .next::after {
   content: '';
   background: url("../images/next.png") 0 0/100% no-repeat;
   width: 70px;
@@ -931,7 +821,7 @@ body {
   position: absolute;
 }
 
-.cardSlider .prev {
+.bodyBlock .cardSlider .prev {
   margin-top: 55%;
   font-size: 15px;
   height: 100%;
@@ -942,7 +832,7 @@ body {
   background: rgba(255, 255, 255, 0);
 }
 
-.cardSlider .prev::before {
+.bodyBlock .cardSlider .prev::before {
   content: '';
   background: url("../images/prev.png") 0 0/100% no-repeat;
   width: 70px;
@@ -950,79 +840,36 @@ body {
   position: absolute;
 }
 
-.cardSlider .imgSlider {
+.bodyBlock .cardSlider .imgSlider {
   max-width: 100%;
   height: auto;
 }
 
-.slider1 {
+.bodyBlock .slider1 {
   display: none;
 }
 
-.mob {
+.bodyBlock .mob {
   display: none;
 }
 
-.none {
+.bodyBlock .none {
   display: none;
 }
 
-@-webkit-keyframes scroll {
-  0% {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-  100% {
-    -webkit-transform: translate(-100%, 0);
-    transform: translate(-100%, 0);
+@media (max-width: 1600px) {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #251d37;
+    background: url("../images/logo.png") 3% 20px/30% no-repeat scroll, url("../images/fon.jpg") 0 0/cover no-repeat fixed;
   }
 }
 
-@keyframes scroll {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  100% {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
-  }
-}
-
-.none {
-  display: none;
-}
-
-@media (max-width: 1450px) {
-  .bodyBlock {
-    background: url("../images/hand.png") 95% 5%/300px 600px no-repeat scroll, url("../images/logo.png") 3% 20px/15% no-repeat scroll, url("../images/fon.jpg") 0 0/cover no-repeat fixed;
-  }
-  .card {
-    position: relative;
-    top: 15vh;
-    width: 100vmax;
-    max-height: -webkit-fit-content;
-    max-height: -moz-fit-content;
-    max-height: fit-content;
-  }
-}
-
-@media (max-width: 800px) {
-  .container {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  .buttonURL {
-    width: 25vmax;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    display: inline;
-    padding: 30px;
-    cursor: pointer;
-    margin: 22% 5% 0 0;
-    padding: 0;
+@media (max-width: 1200px) {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #251d37;
+    background: url("../images/logo.png") 3% 20px/30% no-repeat scroll, url("../images/fon.jpg") 0 0/cover no-repeat fixed;
   }
   .mob {
     padding: 10px;
@@ -1032,18 +879,11 @@ body {
     text-align: center;
     text-shadow: 1px 1px 1px #000;
   }
-  .containerUsl {
-    display: none;
-  }
-  .bodyBlock {
-    background: url("../images/hand.png") 0 0/0% no-repeat scroll, url("../images/logo.png") 50% 30px/40% no-repeat scroll, url("../images/fon.jpg") 0 0/cover no-repeat fixed;
-    width: 100vmax;
-  }
   .containerContent {
     display: none;
   }
   .containerContent1 {
-    margin: 40% 0 0 0;
+    margin: 0 0 0 0;
     padding: 0 0 40px 0;
     width: 100vmax;
     height: -webkit-fit-content;
@@ -1114,131 +954,6 @@ body {
   }
   .cardSlider {
     display: none;
-  }
-  .card {
-    top: 15vh;
-    margin-left: -70px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .card .btn {
-    position: relative;
-    margin: 150px 0 0 20%;
-    width: 400px;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    padding: 30px;
-    border-radius: 5px;
-    background-color: #e9d200;
-    font-weight: bold;
-    color: black;
-    font-size: 25px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    border: 1px solid black;
-  }
-  .card .btn:hover {
-    background-color: rgba(236, 201, 0, 0.9);
-  }
-  .card .btn::before {
-    content: '';
-    background: url("../images/phone_icon.png") 0 0/35% no-repeat;
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: 28%;
-    left: 4%;
-  }
-  .list {
-    font-size: 4vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: 1000px;
-    text-align: center;
-  }
-  .list li {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    position: relative;
-    color: white;
-    margin: 0 0 20px 0;
-  }
-  .list li:nth-child(1) {
-    font-weight: bold;
-    margin: 0 0 150px 0;
-    font-size: 6vh;
-  }
-  .list li:nth-child(2) {
-    margin: 0 0 70px 0;
-  }
-  .list li:nth-child(3) {
-    margin: 0 0 50px 50px;
-  }
-  .list li:nth-child(3)::before {
-    content: '';
-    background: url("../images/clock.png") 0 0 no-repeat;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .list li:nth-child(4) {
-    margin: 0 0 50px 50px;
-  }
-  .list li:nth-child(4)::before {
-    content: '';
-    background: url("../images/chip.png") 0 0 no-repeat;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .list li:nth-child(5) {
-    margin: 0 0 50px 50px;
-  }
-  .list li:nth-child(5)::before {
-    content: '';
-    background: url("../images/medal.png") 0 0 no-repeat;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    top: 0;
-    left: 15px;
-  }
-  .containterNumber {
-    background-color: rgba(31, 31, 31, 0.5);
-  }
-  .footerVue {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .footerVue .cardFooter {
-    margin: 10px auto 0 auto;
   }
 }
 /*# sourceMappingURL=theme.css.map */

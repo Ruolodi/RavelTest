@@ -1,4 +1,7 @@
 <template>
+ 
+ <head><meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=0.5" /></head>
+ 
    <div class="bodyBlock">
      <app-head></app-head >
      <content-rav></content-rav>
